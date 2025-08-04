@@ -273,3 +273,10 @@ const encryptedMessage = new EncryptedMessage();
 window.addEventListener('beforeunload', () => {
     encryptedMessage.destroy();
 });
+document.addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+          var audio = document.getElementById("myAudio");
+          audio.currentTime = 0; // Mulai dari awal setiap kali ditekan
+          audio.play();
+        }
+      });
